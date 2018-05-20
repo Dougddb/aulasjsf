@@ -203,4 +203,5 @@ public class ImplementacaoCrud implements InterfaceCrud<T> {
 	private void rollBackProcessoAjax() {
 		sessionFactory.getCurrentSession().beginTransaction().rollback();
 	}
+	
 }
