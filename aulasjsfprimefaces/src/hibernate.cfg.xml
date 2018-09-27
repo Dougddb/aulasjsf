@@ -18,14 +18,33 @@
 		<property name="hibernate.show_sql">false</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.generate_statistics">false</property>
-		<property name="hibernate."></property>
-		<property name="hibernate."></property>
-		<property name="hibernate."></property>
+		<property name="hibernate.use_sql_comments"></property>
+		<property name="hibernate.connection.autocommit"></property>
+		<property name="hibernate.connection.pool_size"></property>
 		
 		
 		<mapping class=""/>
 		
 		
+		<listener class="org.hibernate.envers.event.AuditEvenListener" 
+				type="post-insert"/>		
 		
+		<listener class="org.hibernate.envers.event.AuditEvenListener" 
+				type="post-update"/>
+		
+		<listener class="org.hibernate.envers.event.AuditEvenListener" 
+				type="post-delete"/>
+				
+		<listener class="org.hibernate.envers.event.AuditEvenListener" 
+				type="post-collection-recreate"/>
+				
+		<listener class="org.hibernate.envers.event.AuditEvenListener" 
+				type="post-collection-update"/>
+				
+		<listener class="org.hibernate.envers.event.AuditEvenListener" 
+				type="post-collection-remove"/>				
+				
+				
+				
 	</session-factory>
 </hibernate-configuration>
